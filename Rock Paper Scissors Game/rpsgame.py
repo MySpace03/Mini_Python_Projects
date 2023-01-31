@@ -1,3 +1,4 @@
+#library need for project
 from random import randint
 
 # we create list for objects i.e rock, paper and Scissors
@@ -5,58 +6,53 @@ from random import randint
 lts = ["Rock","Paper","Scissors","GUN"]
 
 # for keeping scores we keep two counters one for player and one for computer
-c_m = 0
-c_c = 0
+c_p = 0 # for player
+c_c = 0 # for computer
 
 # we create computer to play against human using list and radient function
-comp = lts[randint(0,3)]
+
 
 # setting manual player to False
-player = False
+player = True
 
 # lets start the game and run it until one wins the a game
-while player==False:
-    player = input("Rock, Paper or Scissors? ")
-    if comp == player:
-        print("Its a tie!")
-    elif player=="Rock":
-        if comp == "GUN":
-            print("Pew pew boom boom bang The computer got ultimate Weapon to distroy you You lose!!😎")
-            print("Game over!")
-            c_c +=1
-            player = True
-        elif comp == "Paper":
-            print("You win!","The computer choose:",comp,"Covers",player)
-            c_m +=1
-        else:
-            print("You lose!","The computer choose:",comp,"Smaches",player)
-            c_c +=1
-    elif player == "Paper":
-        if comp == "GUN":
-            print("Pew pew boom boom bang The computer got ultimate Weapon to distroy you You lose!!😎")
-            print("Game over!")
-            c_c += 1
-            player = True
-        elif comp == "Scissors":
-            print("You win!","The computer choose:",comp,"Covers",player)
-            c_m +=1
-        else:
-            print("You lose!","The computer choose:",comp,"Smaches",player)
-            c_c +=1
-    elif player == "Scissors":
-        if comp == "GUN":
-            print("Pew pew boom boom bang The computer got ultimate Weapon to distroy you You lose!!😎")
-            print("Game over!")
-            c_c +=1
-            player = True
-        elif comp == "Paper":
-            print("You win!","The computer choose:",comp,"Covers",player)
-            c_m +=1
-        else:
-            print("You lose!","The computer choose:",comp,"Smaches",player)
-            c_c +=1
-    else:
-        print("The entered Input is not correct check for speeling and caplital letters!")
-    print("The Score of the game are:","\nComputer Score:",c_c,"\nYour Score:",c_m)
-    player = False
+while player==True:
     comp = lts[randint(0,3)]
+    player = input("Rock, Paper or Scissors? ")
+    if(player == comp):
+        print("Its a tie")
+    elif(player == "Rock"):
+        if(comp == "GUN"):
+            print("Pew pew boom boom bang The computer got ultimate Weapon to distroy you You lose!!😎")
+            print("Game over!")
+            c_c +=1;
+        elif(comp == "Paper"):
+            print("You lose! The computer choose: ",comp,"covers",player)
+            c_c +=1
+        elif (comp == "Scissors"):
+            print("You win! the computer choose: ",comp,"will be smaches by",player)
+            c_p +=1
+    elif(player == "Paper"):
+        if(comp == "GUN"):
+            print("Pew pew boom boom bang The computer got ultimate Weapon to distroy you You lose!!😎")
+            print("Game over!")
+            c_c +=1
+        elif(comp == "Rock"):
+            print("You Win! The computer choose: ",comp,"will be covered by",player)
+            c_p +=1
+        elif (comp == "Scissors"):
+            print("You lose! the computer choose: ",comp,"cuts",player)
+            c_c += 1
+    elif(player == "Scissors"):
+        if(comp == "GUN"):
+            print("Pew pew boom boom bang The computer got ultimate Weapon to distroy you You lose!!😎")
+            print("Game over!")
+            c_c +=1;
+        elif(comp == "Rock"):
+            print("You lose! The computer choose: ",comp,"will be smached by",player)
+            c_c +=1
+        elif (comp == "paper"):
+            print("You win! the computer choose: ",comp,"will be cutted by",player)
+            c_p += 1
+    print("Score board: comp ",c_c,"\nYou",c_p)
+    player = True
