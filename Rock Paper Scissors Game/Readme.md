@@ -12,4 +12,3 @@ the big twist is that we live in the world of ai and computer basically if we pr
 ####
 **Twist of the game: the Computer has been given a super power where if its randomly genrated then the game is over**
 ####
-**The game is still on development project**
