@@ -26,6 +26,7 @@ while player==True:
             print("Pew pew boom boom bang The computer got ultimate Weapon to distroy you You lose!!😎")
             print("Game over!")
             c_c +=1;
+            break
         elif(comp == "Paper"):
             print("You lose! The computer choose: ",comp,"covers",player)
             c_c +=1
@@ -37,6 +38,7 @@ while player==True:
             print("Pew pew boom boom bang The computer got ultimate Weapon to distroy you You lose!!😎")
             print("Game over!")
             c_c +=1
+            break
         elif(comp == "Rock"):
             print("You Win! The computer choose: ",comp,"will be covered by",player)
             c_p +=1
@@ -47,7 +49,8 @@ while player==True:
         if(comp == "GUN"):
             print("Pew pew boom boom bang The computer got ultimate Weapon to distroy you You lose!!😎")
             print("Game over!")
-            c_c +=1;
+            c_c +=1
+            break
         elif(comp == "Rock"):
             print("You lose! The computer choose: ",comp,"will be smached by",player)
             c_c +=1
